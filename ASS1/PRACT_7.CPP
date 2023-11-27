@@ -1,0 +1,26 @@
+#include<iostream.h>
+#include<conio.h>
+class student
+{
+public:
+int age,id;
+void printage();
+void printid()
+{
+cout<<"id is: "<<id<<endl;
+}};
+void student::printage()
+{
+cout<<"Age is: "<<age;
+}
+int main()
+{
+clrscr();
+student a;
+a.age=10;
+a.id=43;
+a.printage();
+a.printid();
+getch();
+return 0;
+}

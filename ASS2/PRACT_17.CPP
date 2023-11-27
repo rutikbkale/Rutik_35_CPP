@@ -1,0 +1,28 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+public:
+void fun()
+{
+cout<<"Function with no arguments"<<endl;
+}
+void fun(int x)
+{
+cout<<"x is: "<<x<<endl;
+cout<<"Function with arguments";
+}
+void fun(double y)
+{
+cout<<"y is: "<<y<<endl;
+cout<<"function with double argument";
+}};
+int main()
+{
+A obj;
+obj.fun();
+obj.fun(5);
+obj.fun(3.5);
+getch();
+return 0;
+}

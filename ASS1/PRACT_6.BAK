@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<conio.h>
+ class person
+{
+public: int employee_id,age;
+public: char name,address;
+};
+int main()
+{
+clrscr();
+person p;
+cout<<"Enter the person details: "<<endl;
+cin>>p.employee_id;
+cin>>p.name;
+cin>>p.address;
+cin>>p.age;
+cout<<"Employee id is: "<<p.employee_id<<endl;
+cout<<"Employee name is: "<<p.name<<endl;
+cout<<"Employee address is: "<<p.address<<endl;
+cout<<"Employee age is: "<<p.age;
+getch();
+return 0;
+}

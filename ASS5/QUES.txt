@@ -1,0 +1,16 @@
+Theory
+
+Unit V - Non Linear Data Structure
+Assignament Questions:
+1. Explain the Binary Search Tree and its types traversal with example?
+2. What is the Graph, Explain its types?
+3. What is the AVL Trees, Explain it?
+
+
+Practical
+
+Unit V - Assignment 5
+1	Write a Program for search a node in BST
+2	Write a Program for inorder, preorder,postorder for BST
+3	Write a Program for Graph traversal function DFS program 
+4 	Write a Program for Breadth First Traversal(BFS)

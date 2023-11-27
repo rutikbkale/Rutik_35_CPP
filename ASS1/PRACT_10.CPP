@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+class room
+{
+double length,breadth;
+public:
+room()
+{
+length=4;
+breadth=5;
+}
+room (double l,double b)
+{
+length=l;
+breadth=b;
+}
+room(room &obj)
+{
+length=obj.length;
+breadth=obj.breadth;
+}
+double calarea()
+{
+return length*breadth;
+}};
+int main()
+{
+clrscr();
+room r1,r2(8,6);
+room r3=r1;
+cout<<"Area by default constructor is: "<<r1.calarea()<<endl;
+cout<<"Area by parameterised constructor is: "<<r2.calarea()<<endl;
+cout<<"Area by copy constructor is: "<<r3.calarea();
+getch();
+return 0;
+}

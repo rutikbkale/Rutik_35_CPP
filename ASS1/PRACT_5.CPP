@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+struct point
+{
+int age;
+char name[10];
+};
+int main()
+{
+point p1;
+clrscr();
+cout<<"Enter the name: ";
+cin.get(p1.name,10);
+cout<<"Enter the age: ";
+cin>>p1.age;
+cout<<p1.name<<endl;
+cout<<p1.age;
+getch();
+return 0;
+}
