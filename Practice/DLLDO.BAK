@@ -1,4 +1,4 @@
-// Insetion of Circular LinkedList.
+// Doubly LinkedList operations.
 
 #include<iostream.h>
 #include<conio.h>
@@ -6,8 +6,9 @@
 struct Node{
 	int data;
 	Node *next;
+	Node *prev;
 
-	Node(int data): data(data), next(NULL){}
+	Node(int data): data(data), next(NULL), prev(NULL){}
 };
 
 void displayList(Node *head){
@@ -18,13 +19,23 @@ void displayList(Node *head){
 		temp = temp->next;
 	}
 	cout<<endl;
+	/*Node *ptr = temp->prev;
+	cout<<"Reverse Elements :";
+	while(ptr != NULL){
+		cout<<ptr->data<<" ";
+		ptr=ptr->prev;
+	}
+	cout<<endl;*/
 }
 
-Node *deleteAtBegin(Node *head){
-	Node * temp=head;
-	head=temp->next;
-	delete temp;
-	return head;
+void displayReverseList(Node *last){
+	Node *temp=last;
+	cout<<"Reverse List :";
+	while(temp != NULL){
+		cout<<temp->data<<" ";
+		temp=temp->prev;
+	}
+	cout<<endl;
 }
 
 int main(){
@@ -35,14 +46,19 @@ int main(){
 	Node *forth = new Node(40);
 	Node *fifth = new Node(50);
 
-	head->next = second;
-	second->next = third;
-	third->next = forth;
-	forth->next = fifth;
-	fifth->next = NULL;
+	head->prev=NULL;
+	head->next=second;
+	second->prev=head;
+	second->next=third;
+	third->prev=second;
+	third->next=forth;
+	forth->prev=third;
+	forth->next=fifth;
+	fifth->prev=forth;
+	fifth->next=NULL;
+
 	displayList(head);
-	head=deleteAtBegin(head);
-	displayList(head);
+	displayReverseList(fifth);
 
 	getch();
 	return 0;
